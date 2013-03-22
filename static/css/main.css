@@ -1,0 +1,281 @@
+/* =================================================================*/
+/*               Generic Element Styles
+/* =================================================================*/
+html {
+	height:100%;	
+	font-family:Georgia, serif;
+	font-size:12pt;
+}
+body {
+	background-color:#363636;
+	margin:0px;
+	height:100%;
+}
+a:link, a:hover, a:visited  {
+  color:#054D95;
+}
+a:active {
+  color:#0777E7;
+}
+h2 {
+	margin:0;
+	font-family:Garamond;
+}
+div {
+  padding-bottom:5px;
+}
+p {
+	font-family:Trebuchet, Verdana;
+	font-size:11pt;
+}
+
+.cake-error {
+  overflow:hidden;
+  font-size:8px;
+  color:#000;
+}
+/* =================================================================*/
+/*               Layout Divs
+/* =================================================================*/
+.layout-table {
+		height:100%;
+		padding:0px;
+		border-collapse:collapse;
+	}
+	.layout-content-td {
+		background-color:#f6f6f6;
+		vertical-align:top;
+    padding:0px;
+	}
+	.layout-footer {
+		background-image:url('/~acm/static/images/footer.gif');
+		background-repeat:repeat-x;
+		height:80px;
+		text-align:center;
+		vertical-align:bottom;
+		color: #444;
+		font-family: Arial;
+		font-size: 11px;
+		padding:5px;
+	}
+	.layout-right-repeat {
+		vertical-align:top;
+		background-image:url('/~acm/static/images/right_rep.gif');
+		background-repeat:repeat-y;
+		padding:0px;
+	}
+	.layout-left-repeat {
+		background-image:url('/~acm/static/images/left_rep.gif');
+		background-repeat:repeat-y;
+		padding:0px;
+		vertical-align:top;	
+	}
+  .layout-footer-sidebar {
+    background-color:#F4F4F4;
+    background-image:url('/~acm/static/images/footer-sidebar.gif');
+    background-repeat:none;
+    padding-left:3px;
+  }
+/* =================================================================*/
+/*               Main Navigation Bar
+/* =================================================================*/
+.navcontainer {
+		padding: 0px;
+		margin-left: 0px;
+		margin-bottom:0px;
+		color: #fff;
+		float: left;
+		width: 100%;
+		font-family: arial, helvetica, sans-serif;
+	}
+	.navcontainer li {
+		display: inline;
+	}
+	.navcontainer li.selected a {
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		padding: 0.2em 1em;
+		background-color: #F6F6F6;
+		color: #000;
+		text-decoration: none;
+		float: left;
+		font-family:Century Gothic, Veranda;
+		margin-right:5px;
+	}
+	.navcontainer li a:hover {
+		background-color: #0069B3;
+		color: #fff;
+	}
+	.navcontainer li a {
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		padding: 0.2em 1em;
+		background-color: #044878;
+		color: #FFF;
+		text-decoration: none;
+		float: left;
+		font-family:Century Gothic, Veranda;
+		margin-right:5px;
+	}
+	.navcontainer li.selected a:hover {
+		background-color: #0069B3;
+		color: #fff;
+	}
+
+/* =================================================================*/
+/*               Flash message styles
+/* =================================================================*/
+
+.notice, .success, .warning, .error, .validation, .message {
+border: 1px solid;
+margin: 10px 0px;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+}
+.notice {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('/~acm/images/notice.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('/~acm/images/success.png');
+}
+.warning, .message {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('/~acm/images/warning.png');
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('/~acm/images/error.png');
+}
+
+/* =================================================================*/
+/*               Form Styling
+/* =================================================================*/
+
+label {
+  width: 150px;
+  float: left;
+  text-align: left;
+  margin-right: 0.5em;
+  display: block
+}
+
+textarea {
+  resize:none;
+}
+
+input {
+  border:1px solid #999999;
+}
+
+.submit input {
+  color: #00529B;
+  border: 1px solid #00529B;
+  font-weight: bold;
+}
+
+textarea {
+  font-family:'Monaco','Menlo','Ubuntu Mono','Droid Sans Mono','Courier New',monospace;
+  font-size:10pt;
+}
+
+/* =================================================================*/
+/*               Table Style
+/* =================================================================*/
+
+.edit_table caption {
+	padding: 0 0 5px 0;
+	width: 700px;	 
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+.edit_table th {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA url('/~acm/images/tbl_bg_header.jpg') no-repeat;
+}
+
+.edit_table th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+.edit_table td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+
+
+.edit_table td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+
+.edit_table th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff url('/~acm/images/tbl_bullet.jpg') no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.edit_table th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa url('/~acm/static/images/tbl_bullet2.jpg') no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+}
+
+/* =================================================================*/
+/*               Img/desc template
+/* =================================================================*/
+.image {
+  float:left;
+  border:none;
+  padding:0px 20px;
+}
+.header {
+  font-family:Garamond;
+  font-weight:bold;
+  font-size:18pt;
+  padding:0px 0px;
+}
+.sub_header {
+  font-family:Garamond;
+  font-weight:bold;
+  font-size:14pt;
+}
+.desc {
+  font-size:10pt;
+  text-indent:15px;
+  font-family:Trebuchet, Verdana;
+}
+
+.updated {
+   color: #444444;
+  font-family: Arial;
+  font-size: 11px;
+}

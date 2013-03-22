@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block title %}
+	<title>The ACM at KU</title>
+    {% endblock %}
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css" media="screen" />
+	<?php echo $scripts_for_layout ?>
+</head>
+
+<body>
+<table class="layout-table" width="85%" align="center">
+	<tr>
+		<td colspan="4" style="padding:30px 0px 20px 30px; height:109px;"><img src="{% static "images/logo.gif" %}"/></td>
+	</tr>
+	<tr>
+		<td colspan="4" style="padding:0px 13px; vertical-align:bottom; height:43px;">
+       <ul class="navcontainer">
+           {% for o in links %}
+           <li><a href="{% url org_web.views.page_render o.url_key %}">{{ o.title }}</a></ li>
+           {% endfor %}
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" class="layout-left-repeat" width="13"><img src="{% static "images/top_left_corner.gif" %}"/></td>
+		<td class="layout-content-td">
+      <div style="padding:20px;">
+          {% block content %}
+
+          {% endblock %}
+      </div>
+		</td>
+    <td width="160" style="background-color:#F4F4F4; padding:10px 20px; background-image:url('{% static "img/sidebar-rep.gif" %}'); background-repeat:repeat-y; vertical-align:top;">
+    </td>
+		<td rowspan="2" class="layout-right-repeat"><img src="{% static "images/top_right_corner.gif" %}"/></td>
+	</tr>
+	<tr>
+		<td class="layout-footer">
+			Copyright &copy; 2011 University of Kansas Chapter of ACM
+		</td>
+    <td width="160" class="layout-footer-sidebar">
+    </td>
+	</tr>
+</table>
+
+<!-- Google Analytics Tracking Code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30087820-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
