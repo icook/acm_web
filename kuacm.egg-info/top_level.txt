@@ -1,2 +1,0 @@
-acm_site
-org_web

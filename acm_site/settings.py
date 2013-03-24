@@ -1,12 +1,13 @@
 # Django settings for acm_web project.
 import os
 
-#URL_BASE = 'http://localhost:8000/'
-URL_BASE = 'http://people.eecs.ku.edu/~acm/'
+URL_BASE = 'http://localhost:8000/'
+# Reference for several configuration settings that want a 
+# path to an absolute that resides in the source dir
+ROOT = os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../")
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ROOT = os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../")
 
 ADMINS = (
     ('Isaac Cook', 'isaac@simpload.com'),
@@ -17,7 +18,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': ROOT + '/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': ROOT + '/../sqlite.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -51,20 +52,17 @@ USE_L10N = True
 USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = ROOT + '/dynamic/'
-# This is the directory that officer pictures are put into. Relative to media_root
+# This is the directory _inside_ media root that officer pictures are put into.
 OFFICER_IMG_PATH = 'officer_images/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = URL_BASE + '/web/dynamic/'
+MEDIA_URL = '/~acm/dynamic/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = ROOT + '/static/'
 
 # URL prefix for static files.
@@ -73,7 +71,6 @@ STATIC_URL = '/~acm/web/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    ROOT + "/static",
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
