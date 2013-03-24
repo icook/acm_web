@@ -30,9 +30,9 @@ class News(models.Model):
 class Officer(models.Model):
     fname = models.CharField(max_length=32)
     lname = models.CharField(max_length=32)
-    picture = models.ImageField(upload_to=settings.OFFICER_IMG_PATH)
-    postion = models.CharField(max_length=128)
-    bio = models.TextField()
+    picture = models.ImageField(upload_to=settings.OFFICER_IMG_PATH, blank=True)
+    position = models.CharField(max_length=128, blank=True)
+    bio = models.TextField(blank=True)
 
     def __str__(self):
         return "{} {}".format(self.fname, self.lname)

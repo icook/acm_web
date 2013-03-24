@@ -1,4 +1,4 @@
-Metadata-Version: 1.1
+Metadata-Version: 1.0
 Name: kuacm
 Version: 0.1
 Summary: Simple website for University of Kansas Association for Computing Machinery Chapter
@@ -8,5 +8,3 @@ Author-email: isaac@simpload.com
 License: BSD licence, see LICENCE.txt
 Description: UNKNOWN
 Platform: UNKNOWN
-Requires: django
-Requires: south

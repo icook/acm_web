@@ -3,7 +3,9 @@
 {% block content %}
     {% for officer in officers %}
         <div style="width:100%;">
+	  {% if officer.picture %}
           <div class="image"><img src="{{ officer.picture.url }}" width="160" /></div>
+	  {% endif %}
           <div class="header">{{ officer.fname }} {{ officer.lname }}</div>
           <div class="sub_header">{{ officer.position }}</div>
           <div class="desc">

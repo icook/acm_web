@@ -6,9 +6,11 @@ kuacm.egg-info/PKG-INFO
 kuacm.egg-info/SOURCES.txt
 kuacm.egg-info/dependency_links.txt
 kuacm.egg-info/not-zip-safe
+kuacm.egg-info/requires.txt
 kuacm.egg-info/top_level.txt
 org_web/__init__.py
 org_web/admin.py
 org_web/models.py
 org_web/tests.py
+org_web/urls.py
 org_web/views.py
