@@ -1,7 +1,11 @@
 # Django settings for acm_web project.
 import os
 
+<<<<<<< Updated upstream
 #URL_BASE = 'http://localhost:8000/'
+=======
+URL_BASE = 'http://localhost:8000/'
+>>>>>>> Stashed changes
 URL_BASE = 'http://people.eecs.ku.edu/~acm/'
 
 DEBUG = True
@@ -59,7 +63,11 @@ OFFICER_IMG_PATH = 'officer_images/'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+<<<<<<< Updated upstream
 MEDIA_URL = URL_BASE + '/web/dynamic/'
+=======
+MEDIA_URL = '/~acm/dynamic/'
+>>>>>>> Stashed changes
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
