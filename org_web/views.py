@@ -2,10 +2,9 @@ from django.db import models
 from django.template.context import Context
 from django.http import HttpResponse
 from django.template import loader
-from models import Content, News
+from models import Content, News, Officer
 
 def index(request):
-
     return page_render(request, 'home')
 
 def simple_news(request, nav_items):
@@ -15,6 +14,24 @@ def simple_news(request, nav_items):
 	'posts': posts,
     'links': nav_items,
     })
+    return HttpResponse(template.render(context))
+
+def homepage(request, nav_items):
+    posts = News.objects.all().order_by('-posted')[:5]
+    template = loader.get_template('main/home.html')
+    context = Context({
+    'posts': posts,
+    'links': nav_items,
+    })
+    return HttpResponse(template.render(context))
+
+def officers(request, nav_items):
+    officers = Officer.objects.all()
+    template = loader.get_template('main/officers.html')
+    context = Context({
+        'officers': officers,
+        'links': nav_items,
+        })
     return HttpResponse(template.render(context))
 
 def page_render(request, url_key):

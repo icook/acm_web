@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    {% for officer in officers %}
+        <div style="width:100%;">
+          <div class="image"><img src="{{ officer.picture.url }}" width="160" /></div>
+          <div class="header">{{ officer.fname }} {{ officer.lname }}</div>
+          <div class="sub_header">{{ officer.position }}</div>
+          <div class="desc">
+              {{ officer.bio }}
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+    {% empty %}
+        <h3>No officers have entered their information!</h3>
+    {% endfor %}
+{% endblock %}

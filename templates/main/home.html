@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+{% block content %}
+    {% for post in posts %}
+    <div style="width:100%;">
+      <div class="header">{{ post.title }}</div>
+      <div class="desc">
+        {{ post.body|safe }}
+      </div>
+      <div class="sub_header" style="float:right; font-size:12pt;">Posted {{ post.posted }}</div><br/><br/>
+    </div>
+    {% endfor %}
+    <div style="clear:both;">
+    <center>
+      <iframe src="https://www.google.com/calendar/embed?title=Upcoming%20Events&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=b1jon0c0ld5p5gomau30ohshd0%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FChicago" style="border-width:0px; display:block;" width="800" height="200" frameborder="0" scrolling="no">
+      </iframe>
+    </center>
+    </div>
+    &nbsp;
+{% endblock %}

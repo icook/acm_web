@@ -1,6 +1,9 @@
 # Django settings for acm_web project.
 import os
 
+URL_BASE = 'http://localhost:8000/'
+#URL_BASE = 'http://people.eecs.ku.edu/~acm/'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ROOT = os.path.dirname(os.path.realpath(__file__)) + "/../"
@@ -49,18 +52,20 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = ROOT + 'dynamic/'
+# This is the directory that officer pictures are put into
+OFFICER_IMG_PATH = ROOT + 'dynamic/officer_images/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = URL_BASE + 'dynamic/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ROOT + '../../static/'
+STATIC_ROOT = ROOT + 'static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
